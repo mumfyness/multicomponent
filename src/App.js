@@ -2,6 +2,12 @@
 import React , { useState } from "react";
 import logo from './logo.svg';
 import './App.css';
+import Header from "./pages/Header"
+import Navbar from './pages/Navbar';
+import Content from './pages/Content';
+import Sidebar from './pages/Sidebar';
+import Footer from './pages/Footer';
+
 import Switch from "./Components/Switch";
 
 function App() {
@@ -12,24 +18,28 @@ function App() {
     <div className="app">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.tetradigital.com"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Explorer react components -> reactjs.org
+          TetraDigital
         </a>
       </header>
-      <Switch
+      <Header />
+      <Navbar />
+      <div className="row">
+          <Content />
+          <Sidebar />
+      </div>
+      <Footer />
+      <Switch>
           className="App-toggle"
           isOn={value}
           handleToggle={() => setValue(!value)}
-          onColor="red" /* "cyan"/"red" */
-      />
+          onColor="darkgreen" /* "cyan"/"red" */
+      </Switch>
     </div>
   );
 }
