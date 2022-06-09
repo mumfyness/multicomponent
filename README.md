@@ -76,7 +76,7 @@ Find out more about deployment here:
 By default, the remote repository name will be the name of the source directory.
 Pass `--push` to push any local commits to the new repository.
 
-> gh repo create simpleapp --[public/private] --source . {--remote=git@github.com/mumfyness/simpletoggle} --push
+> gh repo create simpleapp --[public/private] --source=. --push
 
 ### Setup tracking of develp branch
 
