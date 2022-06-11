@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Multicomponent 
+## The Multicomponent project was designed to exercise different react development methods.
+### Adding and displaying photos in the Content page and implementing navigation via a Navbar and Sidbar page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _Notes for Keeping Node/React Up to Date_
 
-## Available Scripts
+## Node should be installed
 
-In the project directory, you can run:
+node --version should be >= 17.0.0
+npm --version should be >= 8.1.0
 
-### `npm start`
+## Install the React module, create-react-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install -g create-react-app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## When setting up a new project repository 
+### **Run npm install globally**
+>npm install -global react reactdom react-scripts
 
-### `npm test`
+>npm update -global  _{**update your node react install**}_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+>npm install _{**install to local repo**}_
 
-### `npm run build`
+>npm install react reactdom react-scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Create a simple react app**
+>npx create-react-app simpleapp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### **_Completed running npx create-react-app simpleapp!_**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### _Output suggests these steps to follow:_
 
-### `npm run eject`
+>  npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##### **_Starts the development server_**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> npm run build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##### **_Creats an optimized production build. Bundles the app into static files for production.
+The build folder is ready to be deployed.
+You may serve it with a static server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  npm install -g serve
+  serve -s build
 
-## Learn More
+Find out more about deployment here:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  https://cra.link/deployment_**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **_Run project tests_**
 
-### Code Splitting
+>  npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##### **_Starts the test runner._**
 
-### Analyzing the Bundle Size
+> npm run eject
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### **_Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!_**
 
-### Making a Progressive Web App
+> na
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **Using GitHub CLI to add locale repo to GitHub online**
+> gh auth login -p ssh/http -h github.com -w
 
-### Advanced Configuration
+### **Using gh cli, add locale repo to GitHub online**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> gh repo create simpletoggle --private/public --source C:\repos\TetraDigital\react\simpletoggle --remote git@github.com/mumfyness/simpletoggle --push
 
-### Deployment
+### **This only created the repo but did not upload source files.** 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### You can manually add local git project files by going to your GitHub repository in a browser or try to do it using gh **_the GitHub CLI_**.
 
-### `npm run build` fails to minify
+### To create a repository interactively, use `gh repo create` with no arguments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### To create a remote repository from an existing local repository, cd into source directory and specify the source directory with `--source=.`
+By default, the remote repository name will be the name of the source directory.
+Pass `--push` to push any local commits to the new repository.
+
+> gh repo create simpleapp --[public/private] --source=. --push
+
+### Setup tracking of develp branch
+
+> git push --set-upstream origin develop
