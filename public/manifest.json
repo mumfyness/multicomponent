@@ -1,6 +1,6 @@
 {
-  "short_name": "SimpleToggle",
-  "name": "A SimpleToggle React App",
+  "short_name": "MultiComponent",
+  "name": "A Multi Component React Application",
   "icons": [
     {
       "src": "favicon.ico",
