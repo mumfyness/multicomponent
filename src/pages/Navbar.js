@@ -5,7 +5,7 @@ class Navbar extends Component {
         return (
             <div className="navbar">
                 <a href="http://localhost:3000">Home</a>
-                <a href="http://www.tetradigital.com">About</a>
+                <a href="https://www.tetradigital.com">About</a>
                 <a href="http://localhost:3000/" className="right">Contact</a>
             </div>
         );
