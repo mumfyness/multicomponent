@@ -4,9 +4,9 @@ class Navbar extends Component {
     render() {
         return (
             <div className="navbar">
-                <a href="http://localhost:3000/multicomponent">Home</a>
-                <a href="../../public/tdgent.html">Preview Tetradigital</a>
-                <a href="http://localhost:3000/multicomponent" className="right">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="tdgent.html">Preview Tetradigital</a>
+                <a href="index.html" className="right">Contact</a>
             </div>
         );
     }

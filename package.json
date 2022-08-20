@@ -2,7 +2,7 @@
   "name": "multicomponent",
   "version": "1.0.1",
   "private": true,
-  "homepage": "https://mumfyness.github.io/multicomponent/",
+  "homepage": "http://mumfyness.github.io/multicomponent",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

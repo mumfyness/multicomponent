@@ -4,14 +4,12 @@ class Sidebar extends Component {
     render() {
         return (
             <div className="side">
-                <h2>Menu Choices</h2>
-                <h5>select one</h5>
-                <div className="fakeimg" style={{ height: 200 }}>Image</div>
-                <p>Choices list</p>
-                <p>thank you</p>
+                <h2>Image Choices</h2>
+                <h3>select one</h3>
+                <br />
                 <div className="fakeimg" style={{ height: 60 }}>Image</div><br />
                 <div className="fakeimg" style={{ height: 60 }}>Image</div><br />
-                <div className="fakeimg" style={{ height: 60 }}>Image</div>
+                <div className="fakeimg" style={{ height: 60 }}>Image</div><br />
             </div>
         );
     }

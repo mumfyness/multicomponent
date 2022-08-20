@@ -125,7 +125,7 @@ body {
 }
 
 /* Airborne images for this sample */
-.flightpicture {
+.FlightPicture {
   background-color: darkgreen;
   padding: 10px;
   align-self: center;
@@ -134,7 +134,7 @@ body {
 }
 
 .show1pict {
-  background-color: #aaa;
+  background-color: #679;
   padding: 20px;
   align-self: center;
   width: 70%;
@@ -142,7 +142,7 @@ body {
 }
 
 .show2pict {
-  background-color: #aaa;
+  background-color: #679;
   padding: 20px;
   align-self: center;
   width: 70%;
@@ -151,7 +151,7 @@ body {
 
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background: #ddd;
 }

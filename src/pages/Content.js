@@ -5,23 +5,21 @@ class Content extends Component {
         return (
             <div className="main">
                 <div className="show1pict" >
-                    <img className={"flightpicture"}
-                         src={"../../images/WedgetailOnThecoast.jpg"}
-                         alt={"AEW&C Wedgetail On The Coast"}
+                    <img className={"FlightPicture"}
+                         src={"WedgeTailOnTheCoast.jpg"}
+                         alt={"AEW&C WedgeTail On The Coast"}
                     />
                 </div>
-                <h2>Airborne 1</h2>
-                <h5>Over water</h5>
+                <p> </p>
+                <p> </p>
                 <br />
                 <div className="show2pict" >
                     <img
-                        className={"flightpicture"}
-                        src={"../../images/WedgetailOverRivers.jpg"}
-                        alt={"AEW&C Wedgetail Over Rivers"}
+                        className={"FlightPicture"}
+                        src={"WedgeTailOverRivers.jpg"}
+                        alt={"AEW&C WedgeTail Over Rivers"}
                     />
                 </div>
-                <h2>Airborne 2</h2>
-                <h5>Over Delta</h5>
             </div>
         );
     }
