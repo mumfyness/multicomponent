@@ -6,7 +6,7 @@ class Content extends Component {
             <div className="main">
                 <div className="show1pict" >
                     <img className={"FlightPicture"}
-                         src={"WedgeTailOnTheCoast.jpg"}
+                         src={"../../public/WedgeTailOnTheCoast.jpg"}
                          alt={"AEW&C WedgeTail On The Coast"}
                     />
                 </div>
@@ -16,7 +16,7 @@ class Content extends Component {
                 <div className="show2pict" >
                     <img
                         className={"FlightPicture"}
-                        src={"WedgeTailOverRivers.jpg"}
+                        src={"../../public/WedgeTailOverRivers.jpg"}
                         alt={"AEW&C WedgeTail Over Rivers"}
                     />
                 </div>
