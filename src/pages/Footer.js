@@ -4,8 +4,9 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <h3>Footer</h3>
-                <h5>copyright(c) address or contact information</h5>
+                <h4>
+                    copyright TetraDigital Enterprises
+                </h4>
             </div>
         );
     }

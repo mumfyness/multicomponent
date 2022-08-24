@@ -6,17 +6,16 @@ class Content extends Component {
             <div className="main">
                 <div className="show1pict" >
                     <img className={"FlightPicture"}
-                         src={"../../public/WedgeTailOnTheCoast.jpg"}
+                         src={"multicomponent/WedgeTailOnTheCoast.jpg"}
                          alt={"AEW&C WedgeTail On The Coast"}
                     />
                 </div>
-                <p> </p>
                 <p> </p>
                 <br />
                 <div className="show2pict" >
                     <img
                         className={"FlightPicture"}
-                        src={"../../public/WedgeTailOverRivers.jpg"}
+                        src={"multicomponent/WedgeTailOverRivers.jpg"}
                         alt={"AEW&C WedgeTail Over Rivers"}
                     />
                 </div>
