@@ -4,19 +4,10 @@ class Content extends Component {
     render() {
         return (
             <div className="main">
-                <div className="show1pict" >
-                    <img className={"FlightPicture"}
-                         src={"multicomponent/WedgeTailOnTheCoast.jpg"}
-                         alt={"AEW&C WedgeTail On The Coast"}
-                    />
-                </div>
-                <p> </p>
-                <br />
-                <div className="show2pict" >
-                    <img
-                        className={"FlightPicture"}
-                        src={"multicomponent/WedgeTailOverRivers.jpg"}
-                        alt={"AEW&C WedgeTail Over Rivers"}
+                <div className="showpicture" >
+                    <img className={"flightpicture"}
+                         src={"WedgeTailOnTheCoast.jpg"}
+                         alt={"selectedimage"}
                     />
                 </div>
             </div>

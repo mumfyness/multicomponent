@@ -61,7 +61,7 @@ body {
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
+  padding: 10px;
   text-align: center;
   background: #269faf;
   color: white;
@@ -79,6 +79,7 @@ body {
 }
 
 /* Style the navigation bar links */
+/* Left-aligned link */
 .navbar a {
   float: left;
   display: block;
@@ -110,8 +111,8 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
+  -ms-flex: auto; /* IE10 */
+  flex: auto;
   background-color: #f1f1f1;
   padding: 20px;
 }
@@ -121,11 +122,22 @@ body {
   -ms-flex: 60%; /* IE10 */
   flex: 60%;
   background-color: white;
+  padding: 8px;
+}
+
+.showpicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #679;
   padding: 20px;
+  align-self: center;
+  width: 90%;
+  height: 90%;
 }
 
 /* Airborne images for this sample */
-.FlightPicture {
+.flightpicture {
   background-color: darkgreen;
   padding: 10px;
   align-self: center;
@@ -133,20 +145,26 @@ body {
   height: 100%;
 }
 
-.show1pict {
+.sidebarpicts {
+  display: compact;
+  align-items: center;
+  justify-content: center;
   background-color: #679;
-  padding: 20px;
+  padding: 10px;
+  margin: auto;
   align-self: center;
-  width: 70%;
-  height: 40%;
+  width: 40%;
+  height: fit-content;
+  cursor: grabbing;
 }
 
-.show2pict {
-  background-color: #679;
-  padding: 20px;
+.thumbnail {
+  background-color: darkgreen;
+  padding: 8px;
   align-self: center;
-  width: 70%;
-  height: 40%;
+  width: 100px;;
+  height: 100px;;
+
 }
 
 /* Footer */

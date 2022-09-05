@@ -7,7 +7,6 @@ import Navbar from './pages/Navbar';
 import Content from './pages/Content';
 import Sidebar from './pages/Sidebar';
 import Footer from './pages/Footer';
-
 import Switch from "./Components/Switch";
 
 const TETRADIGITALICO=  "tetradigital.ico"
