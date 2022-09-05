@@ -30,6 +30,6 @@ test("render Sidebar Image Choices", () => {
 /** Content Tests **/
 test("render Content Image", () => {
   render(<App />);
-  const imageElement = screen.getElement(/flightpicture/i);
+  const imageElement = screen.getByAltText(/selectedimage/i);
   expect(imageElement).toBeInTheDocument();
 });

@@ -5,9 +5,9 @@ class Navbar extends Component {
         /** TODO add href for Contact Support **/
         return (
             <div className="navbar">
-                <a href="multicomponent">Home</a>
-                <a href="tdgent.html">Preview Tetradigital</a>
-                <a href="multicomponent" className="right">Contact Us</a>
+                <a href="/multicomponent">Home</a>
+                <a href="/multicomponent/tdgent.html">Preview Tetradigital</a>
+                <a href="/multicomponent" className="right">Contact Us</a>
             </div>
         );
     }

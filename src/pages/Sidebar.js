@@ -22,17 +22,17 @@ class Sidebar extends Component {
                 <div className="sidebarpicts" >
                     <div >
                         <img // onClick={alert(this)}
-                            className={"thumbnail"} src={"WedgeTailOnTheCoast.jpg"} alt={"thm1"}/>
+                            className={"thumbnail"} src={"/multicomponent/WedgeTailOnTheCoast.jpg"} alt={"thm1"}/>
                     </div>
                     <br/>
                     <div>
                         <img // onClick={alert(this)}
-                             className={"thumbnail"} src={"WedgetailOverRivers.jpg"} alt={"thm2"}/>
+                             className={"thumbnail"} src={"/multicomponent/WedgetailOverRivers.jpg"} alt={"thm2"}/>
                     </div>
                     <br/>
                     <div >
                         <img // onClick={alert(this)}
-                             className={"thumbnail"} src={"PeaceEyeInClouds.jpg"} alt={"thm3"}/>
+                             className={"thumbnail"} src={"/multicomponent/PeaceEyeInClouds.jpg"} alt={"thm3"}/>
                     </div>
                 </div>
             </div>
