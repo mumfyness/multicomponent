@@ -153,18 +153,18 @@ body {
   padding: 10px;
   margin: auto;
   align-self: center;
-  width: 40%;
+  width: 35%;
   height: fit-content;
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 .thumbnail {
   background-color: darkgreen;
-  padding: 8px;
+  padding: 10px;
+  box-shadow: black;
   align-self: center;
-  width: 100px;;
-  height: 100px;;
-
+  width: 100px;
+  height: 100px;
 }
 
 /* Footer */

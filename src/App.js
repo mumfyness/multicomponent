@@ -17,7 +17,7 @@ function App() {
 
   // Print the current process.env.NODE_ENV to console.
   if (process.env.NODE_ENV === "development") {
-      console.log("This React application was started witn 'npm start'");
+      console.log("This React application was started with 'npm start'");
       console.log("Environment variable: process.env.NODE_ENV is: " + process.env.NODE_ENV);
   }
   else {

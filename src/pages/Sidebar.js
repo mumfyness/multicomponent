@@ -9,23 +9,19 @@ class Sidebar extends Component {
                 <h4>Select photo to display</h4>
                 <div className="sidebarpicts" >
                     <div >
-                        <img // onClick={alert(this)}
-                            className={"thumbnail"} src={"/multicomponent/WedgetailOnTheCoast.jpg"} alt={"thm1"}/>
+                        <img className={"thumbnail"} src={"/multicomponent/WedgetailOnTheCoast.jpg"} alt={"thm1"}/>
                     </div>
                     <br/>
                     <div>
-                        <img // onClick={alert(this)}
-                             className={"thumbnail"} src={"/multicomponent/WedgetailOverRivers.jpg"} alt={"thm2"}/>
+                        <img className={"thumbnail"} src={"/multicomponent/WedgetailOverRivers.jpg"} alt={"thm2"}/>
                     </div>
                     <br/>
                     <div >
-                        <img // onClick={alert(this)}
-                             className={"thumbnail"} src={"/multicomponent/PeaceEyeInClouds.jpg"} alt={"thm3"}/>
+                        <img className={"thumbnail"} src={"/multicomponent/PeaceEyeInClouds.jpg"} alt={"thm3"}/>
                     </div>
                     <br/>
                     <div >
-                        <img // onClick={alert(this)}
-                            className={"thumbnail"} src={"/multicomponent/PeaceEagleFlyingHigh.jpg"} alt={"thm4"}/>
+                        <img className={"thumbnail"} src={"/multicomponent/PeaceEagleOnHigh.jpg"} alt={"thm4"}/>
                     </div>
                 </div>
             </div>

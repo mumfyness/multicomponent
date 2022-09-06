@@ -5,7 +5,7 @@ class Footer extends Component {
         return (
             <div className="footer">
                 <h6>
-                    (c) TetraDigital Enterprises
+                    {"\xA9"} 2022 TetraDigital Enterprises
                 </h6>
             </div>
         );
