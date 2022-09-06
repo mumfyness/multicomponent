@@ -85,21 +85,15 @@ Pass `--push` to push any local commits to the new repository.
 ## **Use GitHub pages to deploy your project to GitHub.io online**
 ### Open your package.json and add a homepage field for your project:
 ### For your GitHub project page:
-> "homepage": "https://myusername.github.io/my-app",
-### Or a GitHub user page:
-> "homepage": "https://myusername.github.io",
+> "homepage": "https://myusername.github.io/myproj",
 ### Install gh-pages and add deploy to scripts in package.json
-### To publish it at https://myusername.github.io/my-app, run:
+### To publish it at https://myusername.github.io/myproj, run:
 > npm install --save gh-pages
 > ###  Add the following scripts in your package.json:
 "scripts": {
-+ "predeploy": "npm run build", -- add
-+ "deploy": "gh-pages -d build", -- add
++ "predeploy": "npm run build",
++ "deploy": "gh-pages -d build",
 + "start": "react-scripts start",
 + "build": "react-scripts build",
-### If you are deploying to a GitHub user page instead of a project page, you'll need to make one additional modification:
-### 1. Tweak your package.json scripts to push deployments to master:
-"scripts": {
-"predeploy": "npm run build",
-- "deploy": "gh-pages -d build", --remove
-+ "deploy": "gh-pages -b master -d build", -- add
++  "test": "react-scripts test",
+### This will deploy your project app to your gh-pages branch from your current branch.

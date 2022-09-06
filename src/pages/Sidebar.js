@@ -7,22 +7,10 @@ class Sidebar extends Component {
                 <h2>Image Choices</h2>
                 <br/>
                 <h4>Select photo to display</h4>
-                {/*<form action="action" onChange={setDisplayPicture(this)}>*/}
-                {/*    <h4>Select a photo:</h4>*/}
-                {/*    <select name="fotos" id="fotos">*/}
-                {/*        <option value="WedgeTail">WedgeTail</option>*/}
-                {/*        <option value="Hawk">Hawk</option>*/}
-                {/*        <option value="Egret">Egret</option>*/}
-                {/*        <option value="Vulture">Vulture</option>*/}
-                {/*        <option value="Eagle">Eagle</option>*/}
-                {/*        <option value="Falcon">Falcon</option>*/}
-                {/*    </select>*/}
-                {/*    <input type="submit" value="Submit"/>*/}
-                {/*</form>*/}
                 <div className="sidebarpicts" >
                     <div >
                         <img // onClick={alert(this)}
-                            className={"thumbnail"} src={"/multicomponent/WedgeTailOnTheCoast.jpg"} alt={"thm1"}/>
+                            className={"thumbnail"} src={"/multicomponent/WedgetailOnTheCoast.jpg"} alt={"thm1"}/>
                     </div>
                     <br/>
                     <div>
@@ -33,6 +21,11 @@ class Sidebar extends Component {
                     <div >
                         <img // onClick={alert(this)}
                              className={"thumbnail"} src={"/multicomponent/PeaceEyeInClouds.jpg"} alt={"thm3"}/>
+                    </div>
+                    <br/>
+                    <div >
+                        <img // onClick={alert(this)}
+                            className={"thumbnail"} src={"/multicomponent/PeaceEagleFlyingHigh.jpg"} alt={"thm4"}/>
                     </div>
                 </div>
             </div>
