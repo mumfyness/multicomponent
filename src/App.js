@@ -48,10 +48,10 @@ function App() {
           className="App-toggle"
           isOn={value}
           handleToggle={() => setValue(!value)}
-          onColor="darkgreen" /* "cyan"/"red" */
+          onColor="darkgreen"
       </Switch>
     </div>
   );
-}
+} /** end of App **/
 
 export default App;
