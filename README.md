@@ -82,6 +82,7 @@ Pass `--push` to push any local commits to the new repository.
 
 ### Setup tracking of develop branch
 > git checkout -b develop
+
 > git push --set-upstream origin develop
 
 ## **Use GitHub pages to deploy your project to GitHub.io online**
@@ -93,16 +94,14 @@ Pass `--push` to push any local commits to the new repository.
 ### Install gh-pages and add deploy to scripts in package.json
 ### To publish it at https://ghusername.github.io/projectapp, run:
 > npm install --save gh-pages
-> ###  Add the following scripts in your package.json:
+### You're deployment of GitHub Pages includes the compressed build directory. 
+### You must add '-p 2' to include a depth copy to pick up the static directory and contents.
+###  Add the following scripts in your package.json:
 "scripts": {
 + "predeploy": "npm run build",
-+ "deploy": "gh-pages -d build",
++ "deploy": "gh-pages-p 2 -d build",
 + "start": "react-scripts start",
 + "build": "react-scripts build",
-### If you are deploying to GitHub pages including build directory, 
-### you'll want to make add '-p 2' to pick up the static directory and contents.
-"scripts": {
-+ "predeploy": "npm run build",
-+ "deploy": "gh-pages -p 2 -d build",
-### This tweak will push deployments to your master branch.
+
+### If you want to push deployments to a different remote branch _{your master branch}_ do this.
 + "deploy": "gh-pages -b master -p 2 -d build",
