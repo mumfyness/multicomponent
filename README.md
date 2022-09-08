@@ -56,9 +56,7 @@ Find out more about deployment here:
 
 > npm run eject
 
-##### **_Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!_**
-
-> na
+##### _**NOTE: Create React App 2+ supports TypeScript, Sass, CSS Modules and more without ejecting: https://reactjs.org/blog/2018/10/01/create-react-app-v2.html**_
 
 ## **Using GitHub CLI to add locale repo to GitHub online**
 > gh auth login -p ssh/http -h github.com -w
@@ -76,7 +74,7 @@ Find out more about deployment here:
 ### To create a remote repository from an existing local repository, 
 cd into source directory and specify the source directory with `--source=.`
 By default, the remote repository name will be the name of the source directory.
-Pass `--push` to push any local commits to the new repository.
+Use `--push` to push any local commits to the new repository.
 
 > gh repo create projectname --{public/private} --source=. --push
 
@@ -103,5 +101,5 @@ Pass `--push` to push any local commits to the new repository.
 + "start": "react-scripts start",
 + "build": "react-scripts build",
 
-### If you want to push deployments to a different remote branch _{your master branch}_ do this.
+### If you want to push deployments to a different remote branch _{i.e.: your master branch}_ do this.
 + "deploy": "gh-pages -b master -p 2 -d build",
