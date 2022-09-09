@@ -1,6 +1,6 @@
 # Multicomponent 
 ## The Multicomponent project was designed to exercise different react development methods.
-### Adding and displaying photos in the Content page and implementing navigation via a Navbar and Sidbar page.
+### Adding and displaying photos in the Content page and implementing navigation via Navbar and Sidbar pages.
 
 # _Notes for Keeping Node/React Up to Date_
 
@@ -23,10 +23,10 @@ npm install -g create-react-app
 
 >npm install react reactdom react-scripts
 
-### **Create a simple react app**
->npx create-react-app simpleapp
+### **Create a simple react project app**
+>npx create-react-app simpleprojapp
 
-#### **_Completed running npx create-react-app simpleapp!_**
+#### **_Completed running npx create-react-app simpleprojapp!_**
 
 ##### _Output suggests these steps to follow:_
 
@@ -36,7 +36,8 @@ npm install -g create-react-app
 
 > npm run build
 
-##### **_Creats an optimized production build. Bundles the app into static files for production.
+##### **_Creats an optimized production build._**
+##### Bundles the app into static files for production.
 The build folder is ready to be deployed.
 You may serve it with a static server:
 
@@ -55,45 +56,50 @@ Find out more about deployment here:
 
 > npm run eject
 
-##### **_Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!_**
-
-> na
+##### _**NOTE: Create React App 2+ supports TypeScript, Sass, CSS Modules and more without ejecting: https://reactjs.org/blog/2018/10/01/create-react-app-v2.html**_
 
 ## **Using GitHub CLI to add locale repo to GitHub online**
 > gh auth login -p ssh/http -h github.com -w
 
 ### **Using gh cli, add locale repo to GitHub online**
 
-> gh repo create simpletoggle --private/public --source C:\repos\TetraDigital\react\simpletoggle --remote git@github.com/mumfyness/simpletoggle --push
+> gh repo create projectname --{private/public} --source projectpath --remote git@github.com/ghusername/projectname --push
 
-### **This only created the repo but did not upload source files {if without --push}.** 
+### **If you don't include {--push}, this will only create the repo but not upload source files.** 
 
 ### You can manually add local git project files by going to your GitHub repository in a browser or try to do it using gh **_the GitHub CLI_**.
 
-### To create a repository interactively, use `gh repo create` with no arguments.
+### To create a repository interactively, use `gh repo create` with no arguments, _{I don't prefer this method}_
 
-### To create a remote repository from an existing local repository, cd into source directory and specify the source directory with `--source=.`
+### To create a remote repository from an existing local repository, 
+cd into source directory and specify the source directory with `--source=.`
 By default, the remote repository name will be the name of the source directory.
-Pass `--push` to push any local commits to the new repository.
+Use `--push` to push any local commits to the new repository.
 
-> gh repo create simpleapp --[public/private] --source=. --push
+> gh repo create projectname --{public/private} --source=. --push
 
 ### Setup tracking of develop branch
+> git checkout -b develop
 
 > git push --set-upstream origin develop
 
 ## **Use GitHub pages to deploy your project to GitHub.io online**
 ### Open your package.json and add a homepage field for your project:
 ### For your GitHub project page:
-> "homepage": "https://myusername.github.io/myproj",
+> "homepage": "https://ghusername.github.io/projectname",
+### Or a GitHub user page:
+> "homepage": "https://ghusername.github.io/projectapp",
 ### Install gh-pages and add deploy to scripts in package.json
-### To publish it at https://myusername.github.io/myproj, run:
+### To publish it at https://ghusername.github.io/projectapp, run:
 > npm install --save gh-pages
-> ###  Add the following scripts in your package.json:
+### You're deployment of GitHub Pages includes the compressed build directory. 
+### You must add '-p 2' to include a depth copy to pick up the static directory and contents.
+###  Add the following scripts in your package.json:
 "scripts": {
 + "predeploy": "npm run build",
-+ "deploy": "gh-pages -d build",
++ "deploy": "gh-pages -p 2 -d build",
 + "start": "react-scripts start",
 + "build": "react-scripts build",
-+  "test": "react-scripts test",
-### This will deploy your project app to your gh-pages branch from your current branch.
+
+### If you want to push deployments to a different remote branch _{i.e.: your master branch}_ do this.
++ "deploy": "gh-pages -b master -p 2 -d build",
