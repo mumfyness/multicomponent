@@ -97,7 +97,7 @@ Use `--push` to push any local commits to the new repository.
 ###  Add the following scripts in your package.json:
 "scripts": {
 + "predeploy": "npm run build",
-+ "deploy": "gh-pages -p 2 -d build",
++ "deploy": "gh-pages --add -p 2 -d build",
 + "start": "react-scripts start",
 + "build": "react-scripts build",
 
