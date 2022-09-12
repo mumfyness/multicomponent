@@ -6,6 +6,7 @@ class Content extends Component {
             <div className="main">
                 <div className="showpicture" >
                     <img className={"flightpicture"}
+                         id={"displayContentId"}
                          src={"/multicomponent/WedgetailOnTheCoast.jpg"}
                          alt={"selectedimage"}
                     />

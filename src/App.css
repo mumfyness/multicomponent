@@ -130,7 +130,7 @@ body {
   justify-content: center;
   background-color: #679;
   margin: auto;
-  padding: 16px;
+  padding: 8px;
   align-self: center;
   width: 80%;
   height: 80%;
@@ -138,10 +138,12 @@ body {
 
 .flightpicture {
   background-color: darkgreen;
-  padding: 6px;
+  padding: 8px;
   align-self: center;
   width: 100%;
   height: 100%;
+  visibility: visible;
+  pointer-event: none;
 }
 
 /* Sidebar/right column */
@@ -149,8 +151,8 @@ body {
 .side {
   -ms-flex: auto; /* IE10 */
   flex: auto;
-  background-color: #f1f1f1;
-  padding: 6px;
+  background-color: #f2f2f2;
+  padding: 0px;
 }
 
 .sidebarpicts {
@@ -159,19 +161,21 @@ body {
   justify-content: center;
   background-color: #679;
   margin: auto;
-  padding: 16px;
+  padding: 8px;
   align-self: center;
-  width: 38%;
+  width: 32%;
   height: fit-content;
-  cursor: pointer;
 }
 
 .thumbnail {
   background-color: darkgreen;
-  padding: 6px;
+  padding: 8px;
   align-self: center;
   width: 100px;
   height: 100px;
+  cursor: pointer;
+  visibility: visible;
+  pointer-event: all;
 }
 
 /* Footer */
