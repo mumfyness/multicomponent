@@ -124,6 +124,7 @@ class Sidebar extends Component {
                 }
             }
             catch (e) {
+                resetAllThumbImages(event, thmOrigBgColor);
                 console.log(e.message());
             }
         }
