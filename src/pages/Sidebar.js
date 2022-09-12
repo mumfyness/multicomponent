@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 class Sidebar extends Component {
 
     render() {
-        let lastEventType = "";
         let thmOrigBgColor = "";
 
         return (
@@ -64,6 +63,11 @@ class Sidebar extends Component {
             </div>
         );
 
+        function resetAllThumbImages (event, origBgColor) {
+            // Reset the temporary image-path attribute to undefined.
+            event.currentTarget.style.backgroundColor = origBgColor;
+            event.target.setAttribute("image-path", undefined);
+        }
         /**
          * changeContentImage
          * @param event - pointerup event.
@@ -89,7 +93,6 @@ class Sidebar extends Component {
             try {
                 // pointerdown
                 if (event.type === "pointerdown") {
-                    lastEventType = event.type;
 
                     // Select new Content image from displayed list.
                     let sourcepath = event.target.getAttribute("src");
@@ -99,24 +102,20 @@ class Sidebar extends Component {
                         // Set the temporary image-path attribute.
                         event.target.setAttribute("image-path", sourcepath);
 
-                        let announce = "\nTargetId: " + id + "\nhandle event.type: " + lastEventType +
+                        let announce = "\nTargetId: " + id + "\nhandle event.type: " +
                                        "\ngot source thumbnail Picture: " + sourcepath;
                         console.log(announce);
                     }
                 }
                 // pointerup
                 else if (event.type === "pointerup") {
-                    event.currentTarget.style.backgroundColor = thmOrigBgColor;
                     // set new Content picture.
                     changeContentImage(event);
-                    // Reset the temporary image-path attribute to undefined.
-                    event.target.setAttribute("image-path", undefined);
-
+                    resetAllThumbImages(event, thmOrigBgColor);
                 }
                 // pointerout
                 else if (event.type === "pointerout") {
-                    event.currentTarget.style.backgroundColor = thmOrigBgColor;
-                    event.target.setAttribute("image-path", undefined);
+                    resetAllThumbImages(event, thmOrigBgColor);
                 }
                 // pointerover
                 else if (event.type === "pointerover") {
@@ -128,18 +127,6 @@ class Sidebar extends Component {
                 console.log(e.message());
             }
         }
-        //     let
-        //         name = event.name,
-        //         id = event.element.id;
-        //
-        //     if (lastEventType === event.type) {
-        //         alert("\nanother " + lastEventType + "\ntarget: " + id + "\nname: " + name);
-        //         return;
-        //     }
-        //     lastEventType = event.type;
-        //     this.setPointerCapture(event.pointerId);
-        //     alert("\nnew event: " + lastEventType + "\ntarget: " + id + "\nname: " + name);
-        // }
     };
 }
 
@@ -153,6 +140,4 @@ class Sidebar extends Component {
     // }
 //     return  MouseEvent.mouseUp;
 // }
-
-
 export default Sidebar

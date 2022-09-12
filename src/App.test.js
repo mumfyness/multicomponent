@@ -27,6 +27,19 @@ test("render Sidebar Image Choices", () => {
   expect(displayElement).toBeInTheDocument();
 });
 
+/** Sidebar Image list Tests **/
+test("render Sidebar Image list Tests", () => {
+  render(<App />);
+  var thumbImage = screen.getByAltText(/thm1/i);
+  expect(thumbImage).toBeInTheDocument();
+  thumbImage = screen.getByAltText(/thm2/i);
+  expect(thumbImage).toBeInTheDocument();
+  thumbImage = screen.getByAltText(/thm3/i);
+  expect(thumbImage).toBeInTheDocument();
+  thumbImage = screen.getByAltText(/thm4/i);
+  expect(thumbImage).toBeInTheDocument();
+});
+
 /** Content Tests **/
 test("render Content Image", () => {
   render(<App />);
