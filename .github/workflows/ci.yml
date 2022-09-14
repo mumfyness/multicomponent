@@ -1,0 +1,30 @@
+name: 'Project Build and Test - ci.yml'
+
+# **What it does**: Running on ubuntu, Builds and Tests current repository.
+# **Why we have it**: To make sure this checkin does not break the build and passes all tests.
+# **Who does it impact**: Impacts this repository.
+
+on:
+  push:
+    branches:
+      - "master"
+      - "develop"
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17.1.x
+          cache: npm
+      - name: npm ci
+        run: npm ci
+      - name: npm run build
+        run: npm run build
+      - name: export CI env var
+        run: export CI=true
+      - name: npm test
+        run: npm test
