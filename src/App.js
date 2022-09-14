@@ -1,5 +1,5 @@
 // App JavaScript
-import React , { useState } from "react";
+import React from "react";
 import logo from './logo.svg';
 import './App.css';
 import Header from "./pages/Header"
@@ -7,14 +7,10 @@ import Navbar from './pages/Navbar';
 import Content from './pages/Content';
 import Sidebar from './pages/Sidebar';
 import Footer from './pages/Footer';
-import Switch from "./Components/Switch";
 
 const TETRADIGITALICO=  "tetradigital.ico"
 
 function App() {
-  /* Properties for the Toggle component */
-  const [value, setValue] = useState(false);
-
   // Print the current process.env.NODE_ENV to console.
   if (process.env.NODE_ENV === "development") {
       console.log("This React application was started with 'npm start'");
@@ -44,12 +40,6 @@ function App() {
           <Sidebar />
       </div>
       <Footer />
-      <Switch>
-          className="App-toggle"
-          isOn={value}
-          handleToggle={() => setValue(!value)}
-          onColor="darkgreen"
-      </Switch>
     </div>
   );
 } /** end of App **/

@@ -5,7 +5,7 @@ class Header extends Component {
         return (
             <div className="header">
                 <h2>MultiComponent React Application</h2>
-                <p>application started from create-react-app script</p>
+                <h5>application started from create-react-app script</h5>
             </div>
         );
     }

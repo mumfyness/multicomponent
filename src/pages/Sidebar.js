@@ -5,13 +5,15 @@ import React, { Component } from 'react';
 class Sidebar extends Component {
 
     render() {
-        let thmOrigBgColor = "";
+        let thmOrigBgColor = "",
+            highlighted    = "cyan",
+            selected       = "beige";
 
         return (
             <div className="side">
                 <h2>Image Choices</h2>
                 <h4>Select photo to display</h4>
-                <div className="sidebarpicts" >
+                <div className="sidebarPictures" >
                     <div >
                         <img
                             className={"thumbnail"}
@@ -23,7 +25,6 @@ class Sidebar extends Component {
                             src={"/multicomponent/WedgetailOnTheCoast.jpg"}
                             alt={"thm1"}/>
                     </div>
-                    <br/>
                     <div>
                         <img
                             className={"thumbnail"}
@@ -35,7 +36,6 @@ class Sidebar extends Component {
                             src={"/multicomponent/WedgetailOverRivers.jpg"}
                             alt={"thm2"}/>
                     </div>
-                    <br/>
                     <div >
                         <img
                             className={"thumbnail"}
@@ -47,7 +47,6 @@ class Sidebar extends Component {
                             src={"/multicomponent/PeaceEyeInClouds.jpg"}
                             alt={"thm3"}/>
                     </div>
-                    <br/>
                     <div >
                         <img
                             className={"thumbnail"}
@@ -93,7 +92,7 @@ class Sidebar extends Component {
             try {
                 // pointerdown
                 if (event.type === "pointerdown") {
-
+                    event.currentTarget.style.backgroundColor = selected;
                     // Select new Content image from displayed list.
                     let sourcepath = event.target.getAttribute("src");
 
@@ -113,19 +112,18 @@ class Sidebar extends Component {
                     changeContentImage(event);
                     resetAllThumbImages(event, thmOrigBgColor);
                 }
+                // pointerover
+                else if (event.type === "pointerover") {
+                    thmOrigBgColor = event.currentTarget.style.backgroundColor;
+                    event.currentTarget.style.backgroundColor = highlighted;
+                }
                 // pointerout
                 else if (event.type === "pointerout") {
                     resetAllThumbImages(event, thmOrigBgColor);
                 }
-                // pointerover
-                else if (event.type === "pointerover") {
-                    thmOrigBgColor = event.currentTarget.style.backgroundColor;
-                    event.currentTarget.style.backgroundColor = "yellow";
-                }
             }
             catch (e) {
                 resetAllThumbImages(event, thmOrigBgColor);
-                console.log(e.message());
             }
         }
     };
@@ -134,11 +132,11 @@ class Sidebar extends Component {
 /** TODO Use similar function to respond to "Contact Us" in Navbar
  * setDisplayPicture dynamically sets the selected picture
  * in the Content column
+ * function setDisplayPicture(thumbdiv) {
+ *     if (thumbdiv !== undefined) {
+ *         alert(thumbdiv);
+ *     }
+ *     return  MouseEvent.mouseUp;
+ * }
  **/
-//function setDisplayPicture(thumbdiv) {
-    // if (thumbdiv !== undefined) {
-    //     alert(thumbdiv);
-    // }
-//     return  MouseEvent.mouseUp;
-// }
 export default Sidebar

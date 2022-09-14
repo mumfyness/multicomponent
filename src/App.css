@@ -56,8 +56,6 @@
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  padding: 0px;
   min-width: 40px;
   min-height: 80px;
 }
@@ -116,15 +114,15 @@ body {
 /* Content Main column */
 /* Content Airborne images for this application */
 .main {
+  padding: 8px;
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: white;
-  padding: 20px;
-  min-width: 40px;
-  min-height: 80px;
+  min-width: 72px;
+  min-height: 48px;
 }
 
-.showpicture {
+.showPicture {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,30 +130,31 @@ body {
   margin: auto;
   padding: 8px;
   align-self: center;
-  width: 80%;
-  height: 80%;
+  width: fit-content;
+  height: fit-content;
+
 }
 
-.flightpicture {
+.flightPicture {
   background-color: darkgreen;
   padding: 8px;
   align-self: center;
   width: 100%;
   height: 100%;
   visibility: visible;
-  pointer-event: none;
+  pointer-events: none;
 }
 
 /* Sidebar/right column */
 /* Content image selection */
 .side {
+  margin: 0px;
   -ms-flex: auto; /* IE10 */
   flex: auto;
   background-color: #f2f2f2;
-  padding: 0px;
 }
 
-.sidebarpicts {
+.sidebarPictures {
   display: compact;
   align-items: center;
   justify-content: center;
@@ -163,7 +162,7 @@ body {
   margin: auto;
   padding: 8px;
   align-self: center;
-  width: 32%;
+  width: fit-content;
   height: fit-content;
 }
 
@@ -171,17 +170,18 @@ body {
   background-color: darkgreen;
   padding: 8px;
   align-self: center;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 70px;
   cursor: pointer;
   visibility: visible;
-  pointer-event: all;
+  pointer-events: all;
 }
 
 /* Footer */
 .footer {
-  min-height: 1vh;
+  min-height: 1px;
   padding: 1px;
   text-align: center;
   background: #ddd;
+  max-height: 6vh
 }
