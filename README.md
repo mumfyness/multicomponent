@@ -94,12 +94,15 @@ Use `--push` to push any local commits to the new repository.
 > npm install --save gh-pages
 ### You're deployment of GitHub Pages includes the compressed build directory. 
 ### You must add '-p 2' to include a depth copy to pick up the static directory and contents.
+### I also note that I found gh-pages does not fully clean up and deploy your current build
+### unless you add the '--remove' parameter. The '--add' causes the deployment to be additive, 
+### and may not update accurately.
 ###  Add the following scripts in your package.json:
 "scripts": {
 + "predeploy": "npm run build",
-+ "deploy": "gh-pages --add -p 2 -d build",
++ "deploy": "gh-pages --remove -p 2 -d build",
 + "start": "react-scripts start",
 + "build": "react-scripts build",
 
 ### If you want to push deployments to a different remote branch _{i.e.: your master branch}_ do this.
-+ "deploy": "gh-pages -b master -p 2 -d build",
++ "deploy": "gh-pages -b master -p 2 -d build"
