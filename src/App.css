@@ -148,7 +148,7 @@ body {
 /* Sidebar/right column */
 /* Content image selection */
 .side {
-  margin: 0px;
+  margin: 0;
   -ms-flex: auto; /* IE10 */
   flex: auto;
   background-color: #f2f2f2;
@@ -175,6 +175,11 @@ body {
   cursor: pointer;
   visibility: visible;
   pointer-events: all;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 /* Footer */

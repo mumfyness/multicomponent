@@ -7,6 +7,12 @@ class Content extends Component {
                 <div className="showPicture" >
                     <img className={"flightPicture"}
                          id={"displayContentId"}
+                         onDragEnter={()=> {return false;}}
+                         onDragStart={()=> {return false;}}
+                         onDragEnd={()=> {return false;}}
+                         onDragExit={()=> {return false;}}
+                         onDragLeave={()=> {return false;}}
+                         onDrop={()=> {return false;}}
                          src={"/multicomponent/WedgetailOnTheCoast.jpg"}
                          alt={"selectedimage"}
                     />

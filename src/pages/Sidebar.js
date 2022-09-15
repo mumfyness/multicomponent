@@ -14,7 +14,7 @@ class Sidebar extends Component {
                 <h2>Image Choices</h2>
                 <h4>Select photo to display</h4>
                 <div className="sidebarPictures" >
-                    <div >
+                    <div>
                         <img
                             className={"thumbnail"}
                             id={"thm1"}
@@ -36,7 +36,7 @@ class Sidebar extends Component {
                             src={"/multicomponent/WedgetailOverRivers.jpg"}
                             alt={"thm2"}/>
                     </div>
-                    <div >
+                    <div>
                         <img
                             className={"thumbnail"}
                             id={"thm3"}
@@ -47,7 +47,7 @@ class Sidebar extends Component {
                             src={"/multicomponent/PeaceEyeInClouds.jpg"}
                             alt={"thm3"}/>
                     </div>
-                    <div >
+                    <div>
                         <img
                             className={"thumbnail"}
                             id={"thm4"}
