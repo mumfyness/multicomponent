@@ -26,5 +26,5 @@ jobs:
         run: npm run build
       - name: export CI env var
         run: export CI=true
-      - name: npm test
-        run: npm test
+      - name: CI=true, npm test to run once.
+        run: CI=true, npm test
